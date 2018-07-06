@@ -13,10 +13,20 @@ function Person(first, last, age, gender, interests) {
         } else {
             pronoun = 'He';
         }
-        alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. ' + pronoun + ' likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+    }
+    this.interestsList = function() {
+        for (i = 0; i < interests.length; i++) {
+            if (i < interests.length) {
+                interestsList += interests[i] + ', ';
+            } else {
+                interestsList += ' and ' + interests[i] + '. ';
+            }
+        }
     };
-    this.greeting = function() {
-        alert('Hi! I\'m ' + this.name.first + '.');
-    };
+    alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. ' + pronoun + ' likes ' + interestsList);
 }
+this.greeting = function() {
+    alert('Hi! I\'m ' + this.name.first + '.');
+};
+
 var person1 = new Person('Susan', 'Smith', 32, 'female', ['music', 'skiing']);
