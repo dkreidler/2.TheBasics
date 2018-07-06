@@ -8,25 +8,27 @@ function Person(first, last, age, gender, interests) {
     this.interests = interests;
     this.bio = function() {
         var pronoun = 'He';
+        var interestsList = '';
         if (gender === 'female') {
             pronoun = 'She';
         } else {
             pronoun = 'He';
         }
-    }
-    this.interestsList = function() {
         for (i = 0; i < interests.length; i++) {
-            if (i < interests.length) {
+
+            if (i < interests.length - 1) {
                 interestsList += interests[i] + ', ';
             } else {
-                interestsList += ' and ' + interests[i] + '. ';
+                interestsList += 'and ' + interests[i] + '. ';
             }
         }
-    };
-    alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. ' + pronoun + ' likes ' + interestsList);
+        alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. ' + pronoun + ' likes ' + interestsList);
+
+    }
+
 }
 this.greeting = function() {
     alert('Hi! I\'m ' + this.name.first + '.');
 };
 
-var person1 = new Person('Susan', 'Smith', 32, 'female', ['music', 'skiing']);
+var person1 = new Person('Dave', 'Smith', 32, 'male', ['music', 'skiing', 'not skiing']);
