@@ -38,9 +38,9 @@ function Person(first, last, age, gender, interests) {
 
     }
 
+    this.greeting = function() {
+        alert('Hi! I\'m ' + this.name.first + '.');
+    };
 }
-this.greeting = function() {
-    alert('Hi! I\'m ' + this.name.first + '.');
-};
 
 var person1 = new Person('Dave', 'Smith', 32, 'male', ['death metal', 'bebop', 'cats']);
