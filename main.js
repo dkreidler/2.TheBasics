@@ -43,4 +43,4 @@ function Person(first, last, age, gender, interests) {
     };
 }
 
-var person1 = new Person('Dave', 'Smith', 32, 'male', ['death metal', 'bebop', 'cats']);
+var person1 = new Person('Dave', 'Smith', 32, 'male', ['death metal', 'cowboys', 'bebop', 'cats']);
